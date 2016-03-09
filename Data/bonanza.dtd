@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Order placement for Bob's Burgers better burger bonanza -->
+<!-- The bob's burgers dtd tutorial -->
 
 <!-- an order identifies the customer, order type, burgers, and anything special -->
 <!ELEMENT order (customer, delivery?, burger+, special)>
