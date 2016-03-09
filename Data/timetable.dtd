@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- dtd for a week long student timetable -->
+
+<!-- class period -->
+<!ELEMENT period  (room, time, day_of_week, course, instructor, duration)>
+
+<!-- room code  -->
+<!ELEMENT room (#PCDATA)>
+
+<!-- start time of class  -->
+<!ELEMENT time (#PCDATA)>
+
+<!-- course name -->
+<!ELEMENT course (#PCDATA)>
+
+<!-- the day of the week -->
+<!ELEMENT day_of_week (#PCDATA)>
+<!ATTLIST day_of_week
+    day    (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
+>
+
+<!-- class duration in minutes (can only be 50 or 110 mins long -->
+<!ELEMENT duration (#PCDATA)>
+<!ATTLIST duration
+    slots    (50|110) #REQUIRED
+>
+<!-- instructor name  -->
+<!ELEMENT instructor (#PCDATA)>
