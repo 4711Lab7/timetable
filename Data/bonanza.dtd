@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Order placement for Bob's Burgers better burger bonanza -->
+
+<!-- an order identifies the customer, order type, burgers, and anything special -->
+<!ELEMENT order (customer, delivery?, burger+, special)>
+
+<!-- customer, identified by their name  -->
+<!ELEMENT customer (#PCDATA)>
+
+<!--customer specified order type (can be eatin, takeout or delivery) -->
+<!ATTLIST order
+    type    (eatin|takeout|delivery) #REQUIRED 
+>
+
+<!-- an order to be delivered -->
+<!ELEMENT delivery (#PCDATA)>
+
+<!-- provides for any special instructions -->
+<!ELEMENT special (#PCDATA)>
+
+<!-- Burgers (specified individually)
+    - 1 of 5 patty options
+    - up to 2 cheeses
+    - any number of toppings
+    - any number of sauces
+    - special instructions
+    - optional name, should the customer wish to propose this as a menu item
+ -->
+<!ELEMENT burger (patty, cheeses, topping*, sauces, instructions?, name?)>
+
+<!-- patty is one of 5 types (beef by default). Can be named explicitly -->
+<!ELEMENT patty (#PCDATA)>
+<!ATTLIST patty
+    type    (beef|pork|turkey|vege) "beef"
+>
+
+<!-- the customer can order 2 cheeses: one on the top, and one on the bottom -->
+<!ELEMENT cheeses EMPTY>
+<!ATTLIST cheeses
+    top    (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
+    bottom    (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
+>
+
+<!-- Burger toppings, handled individually -->
+<!ELEMENT topping (#PCDATA)>
+<!ATTLIST topping
+    type    (letuce|tomato|raw|dill|roasted|shrooms|salsa|bacon|chillies|fkchili|avocado|egg|porkbelly) #REQUIRED
+>
+<!-- Burger Sauces -->
+<!ELEMENT sauce EMPTY>
+<!ATTLIST sauce
+    type    (Ketchup|mustard|moyo|fksauce) #REQUIRED
+>
+
+<!-- any special instructions, this can be almost anything-->
+<!ELEMENT instructions (#PCDATA)>
+
+<!-- the proposed name for the burger-->
+<!ELEMENT name (#PCDATA)>
