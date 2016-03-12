@@ -1,28 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- dtd for a week long student timetable -->
+<?xml version='1.0' encoding='UTF-8'?>
 
-<!-- class period -->
-<!ELEMENT period  (room, time, day_of_week, course, instructor, duration)>
+<!--must be in this order-->
+<!ELEMENT timetable (timeslots, daysofweek, courses)>
 
-<!-- room code  -->
-<!ELEMENT room (#PCDATA)>
+<!ELEMENT timeslots (time)*>
 
-<!-- start time of class  -->
-<!ELEMENT time (#PCDATA)>
-
-<!-- course name -->
-<!ELEMENT course (#PCDATA)>
-
-<!-- the day of the week -->
-<!ELEMENT day_of_week (#PCDATA)>
-<!ATTLIST day_of_week
-    day    (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
+<!ELEMENT time (class)*>
+<!ATTLIST time
+    start CDATA #REQUIRED
 >
 
-<!-- class duration in minutes (can only be 50 or 110 mins long -->
-<!ELEMENT duration (#PCDATA)>
-<!ATTLIST duration
-    slots    (50|110) #REQUIRED
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT class EMPTY>
+<!ATTLIST class
+    location CDATA #REQUIRED
+    duration (50 | 100) #REQUIRED
+    day (monday | tuesday | wednesday | thursday | friday) #REQUIRED
+    course (blaw3600 | comp4711 | comp4560 | comp4735 | comp4941 | comp4945) #REQUIRED
+    instructor CDATA #REQUIRED
+    end CDATA #REQUIRED
+    start CDATA #REQUIRED
 >
-<!-- instructor name  -->
-<!ELEMENT instructor (#PCDATA)>
+<!--must be in this order-->
+<!ELEMENT daysofweek (monday, tuesday, wednesday, thursday, friday)>
+
+<!ELEMENT monday (class)*>
+
+<!ELEMENT tuesday (class)*>
+
+<!ELEMENT wednesday (class)*>
+
+<!ELEMENT thursday (class)*>
+
+<!ELEMENT friday (class)*>
+
+<!--courses must be listed out in this order-->
+<!ELEMENT courses (blaw3600, comp4711, comp4560, comp4735, comp4941, comp4945)>
+
+<!ELEMENT blaw3600 (class)*>
+
+<!ELEMENT comp4711 (class)*>
+
+<!ELEMENT comp4560 (class)*>
+
+<!ELEMENT comp4735 (class)*>
+
+<!ELEMENT comp4941 (class)*>
+
+<!ELEMENT comp4945 (class)*>
