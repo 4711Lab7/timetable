@@ -4,35 +4,35 @@
 <timetable>
     <timeslots>
         <time start="830">
-            <class start="830" end="1020" instructor="Brenda Fine" course="comp4560" day="monday" duration="100" location="se12-320"></class>
-            <class start="830" end="1020" instructor="Catherine Ryan" course="blaw3600" day="friday" duration="100" location="sw5-1840"></class>
+            <class start="830" end="1020" instructor="Brenda Fine" course="comp4560" day="monday" location="se12-320"></class>
+            <class start="830" end="1020" instructor="Catherine Ryan" course="blaw3600" day="friday" location="sw5-1840"></class>
         </time>
         <time start="930">
-            <class start="930" end="1020" instructor="Tejinder Randhawa" course="comp4945" day="wednesday" duration="50" location="se12-319"></class>
-            <class start="930" end="1120" instructor="Catherine Ryan" course="blaw3600" day="thursday" duration="100" location="sw3-2620"></class>
+            <class start="930" end="1020" instructor="Tejinder Randhawa" course="comp4945" day="wednesday" location="se12-319"></class>
+            <class start="930" end="1120" instructor="Catherine Ryan" course="blaw3600" day="thursday" location="sw3-2620"></class>
         </time>
         <time start="1030">
-            <class start="1030" end="1120" instructor="Tejinder Randhawa" course="comp4941" day="wednesday" duration="50" location="se12-319"></class>
+            <class start="1030" end="1120" instructor="Tejinder Randhawa" course="comp4941" day="wednesday" location="se12-319"></class>
         </time>
         <time start="1130">
-            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="monday" duration="50" location="sw1-1205"></class>
-            <class start="1130" end="1220" instructor="Brenda Fine" course="comp4560" day="tuesday" duration="50" location="sw5-1850"></class>
-            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="thursday" duration="50" location="sw3-1710"></class>
+            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="monday" location="sw1-1205"></class>
+            <class start="1130" end="1220" instructor="Brenda Fine" course="comp4560" day="tuesday" location="sw5-1850"></class>
+            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="thursday" location="sw3-1710"></class>
         </time>
         <time start="1230">
-            <class start="1230" end="1420" instructor="James Parry" course="comp4711" day="tuesday" duration="100" location="se12-320"></class>
-            <class start="1230" end="1320" instructor="Brenda Fine" course="comp4560" day="friday" duration="50" location="sw3-1750"></class>
+            <class start="1230" end="1420" instructor="James Parry" course="comp4711" day="tuesday" location="se12-320"></class>
+            <class start="1230" end="1320" instructor="Brenda Fine" course="comp4560" day="friday" location="sw3-1750"></class>
         </time>
         <time start="1330">
-            <class start="1330" end="1420" instructor="Mirela Gutica" course="comp4735" day="wednesday" duration="50" location="sw1-1205"></class>
-            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4945" day="thursday" duration="50" location="se12-319"></class>
-            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" duration="50" location="se12-319"></class>
+            <class start="1330" end="1420" instructor="Mirela Gutica" course="comp4735" day="wednesday" location="sw1-1205"></class>
+            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4945" day="thursday" location="se12-319"></class>
+            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" location="se12-319"></class>
         </time>
         <time start="1430">
-            <class start="1430" end="1520" instructor="James Parry" course="comp4711" day="tuesday" duration="50" location="sw5-1840"></class>
+            <class start="1430" end="1520" instructor="James Parry" course="comp4711" day="tuesday" location="sw5-1840"></class>
         </time>
         <time start="1530">
-            <class start="1530" end="1720" instructor="Mathew Linder" course="comp4735" day="monday" duration="100" location="se12-322"></class>
+            <class start="1530" end="1720" instructor="Mathew Linder" course="comp4735" day="monday" location="se12-322"></class>
         </time>
         <time start="1630">
         </time>
@@ -40,59 +40,59 @@
     
     <daysofweek>
         <monday>
-            <class start="830" end="1020" instructor="Brenda Fine" course="comp4560" day="monday" duration="100" location="se12-320"></class>
-            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="monday" duration="50" location="sw1-1205"></class>
-            <class start="1530" end="1720" instructor="Mathew Linder" course="comp4735" day="monday" duration="100" location="se12-322"></class>
+            <class start="830" end="1020" instructor="Brenda Fine" course="comp4560" day="monday" location="se12-320"></class>
+            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="monday" location="sw1-1205"></class>
+            <class start="1530" end="1720" instructor="Mathew Linder" course="comp4735" day="monday" location="se12-322"></class>
         </monday>
         <tuesday>
-            <class start="1130" end="1220" instructor="Brenda Fine" course="comp4560" day="tuesday" duration="50" location="sw5-1850"></class>
-            <class start="1230" end="1420" instructor="James Parry" course="comp4711" day="tuesday" duration="100" location="se12-320"></class>
-            <class start="1430" end="1520" instructor="James Parry" course="comp4711" day="tuesday" duration="50" location="sw5-1840"></class>
+            <class start="1130" end="1220" instructor="Brenda Fine" course="comp4560" day="tuesday" location="sw5-1850"></class>
+            <class start="1230" end="1420" instructor="James Parry" course="comp4711" day="tuesday" location="se12-320"></class>
+            <class start="1430" end="1520" instructor="James Parry" course="comp4711" day="tuesday" location="sw5-1840"></class>
         </tuesday>
         <wednesday>
-            <class start="930" end="1020" instructor="Tejinder Randhawa" course="comp4945" day="wednesday" duration="50" location="se12-319"></class>
-            <class start="1030" end="1120" instructor="Tejinder Randhawa" course="comp4941" day="wednesday" duration="50" location="se12-319"></class>
-            <class start="1330" end="1420" instructor="Mirela Gutica" course="comp4735" day="wednesday" duration="50" location="sw1-1205"></class>
+            <class start="930" end="1020" instructor="Tejinder Randhawa" course="comp4945" day="wednesday" location="se12-319"></class>
+            <class start="1030" end="1120" instructor="Tejinder Randhawa" course="comp4941" day="wednesday" location="se12-319"></class>
+            <class start="1330" end="1420" instructor="Mirela Gutica" course="comp4735" day="wednesday" location="sw1-1205"></class>
         </wednesday>
         <thursday>
-            <class start="930" end="1120" instructor="Catherine Ryan" course="blaw3600" day="thursday" duration="100" location="sw3-2620"></class>
-            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="thursday" duration="50" location="sw3-1710"></class>
-            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4945" day="thursday" duration="50" location="se12-319"></class>
+            <class start="930" end="1120" instructor="Catherine Ryan" course="blaw3600" day="thursday" location="sw3-2620"></class>
+            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="thursday" location="sw3-1710"></class>
+            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4945" day="thursday" location="se12-319"></class>
         </thursday>
         <friday>
-            <class start="830" end="1020" instructor="Catherine Ryan" course="blaw3600" day="friday" duration="100" location="sw5-1840"></class>
-            <class start="1230" end="1320" instructor="Brenda Fine" course="comp4560" day="friday" duration="50" location="sw3-1750"></class>
-            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" duration="50" location="se12-319"></class>
+            <class start="830" end="1020" instructor="Catherine Ryan" course="blaw3600" day="friday" location="sw5-1840"></class>
+            <class start="1230" end="1320" instructor="Brenda Fine" course="comp4560" day="friday" location="sw3-1750"></class>
+            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" location="se12-319"></class>
         </friday>
     </daysofweek>
     
     <courses>
         <blaw3600>
-            <class start="930" end="1120" instructor="Catherine Ryan" course="blaw3600" day="thursday" duration="100" location="sw3-2620"></class>
-            <class start="830" end="1020" instructor="Catherine Ryan" course="blaw3600" day="friday" duration="100" location="sw5-1840"></class>
+            <class start="930" end="1120" instructor="Catherine Ryan" course="blaw3600" day="thursday" location="sw3-2620"></class>
+            <class start="830" end="1020" instructor="Catherine Ryan" course="blaw3600" day="friday" location="sw5-1840"></class>
         </blaw3600>
         <comp4711>
-            <class start="1230" end="1420" instructor="James Parry" course="comp4711" day="tuesday" duration="100" location="se12-320"></class>
-            <class start="1430" end="1520" instructor="James Parry" course="comp4711" day="tuesday" duration="50" location="sw5-1840"></class>
+            <class start="1230" end="1420" instructor="James Parry" course="comp4711" day="tuesday" location="se12-320"></class>
+            <class start="1430" end="1520" instructor="James Parry" course="comp4711" day="tuesday" location="sw5-1840"></class>
         </comp4711>
         <comp4560>
-            <class start="830" end="1020" instructor="Brenda Fine" course="comp4560" day="monday" duration="100" location="se12-320"></class>
-            <class start="1130" end="1220" instructor="Brenda Fine" course="comp4560" day="tuesday" duration="50" location="sw5-1850"></class>
-            <class start="1230" end="1320" instructor="Brenda Fine" course="comp4560" day="friday" duration="50" location="sw3-1750"></class>
+            <class start="830" end="1020" instructor="Brenda Fine" course="comp4560" day="monday" location="se12-320"></class>
+            <class start="1130" end="1220" instructor="Brenda Fine" course="comp4560" day="tuesday" location="sw5-1850"></class>
+            <class start="1230" end="1320" instructor="Brenda Fine" course="comp4560" day="friday" location="sw3-1750"></class>
         </comp4560>
         <comp4735>
-            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="monday" duration="50" location="sw1-1205"></class>
-            <class start="1530" end="1720" instructor="Mathew Linder" course="comp4735" day="monday" duration="100" location="se12-322"></class>
-            <class start="1330" end="1420" instructor="Mirela Gutica" course="comp4735" day="wednesday" duration="50" location="sw1-1205"></class>
-            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="thursday" duration="50" location="sw3-1710"></class>
+            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="monday" location="sw1-1205"></class>
+            <class start="1530" end="1720" instructor="Mathew Linder" course="comp4735" day="monday" location="se12-322"></class>
+            <class start="1330" end="1420" instructor="Mirela Gutica" course="comp4735" day="wednesday" location="sw1-1205"></class>
+            <class start="1130" end="1220" instructor="Mirela Gutica" course="comp4735" day="thursday" location="sw3-1710"></class>
         </comp4735>
         <comp4941>
-            <class start="1030" end="1120" instructor="Tejinder Randhawa" course="comp4941" day="wednesday" duration="50" location="se12-319"></class>
-            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" duration="50" location="se12-319"></class>
+            <class start="1030" end="1120" instructor="Tejinder Randhawa" course="comp4941" day="wednesday" location="se12-319"></class>
+            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" location="se12-319"></class>
         </comp4941>
         <comp4945>
-            <class start="930" end="1020" instructor="Tejinder Randhawa" course="comp4945" day="wednesday" duration="50" location="se12-319"></class>
-            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" duration="50" location="se12-319"></class>
+            <class start="930" end="1020" instructor="Tejinder Randhawa" course="comp4945" day="wednesday" location="se12-319"></class>
+            <class start="1330" end="1720" instructor="Tejinder Randhawa" course="comp4941" day="friday" location="se12-319"></class>
         </comp4945>
     </courses>
 </timetable>
