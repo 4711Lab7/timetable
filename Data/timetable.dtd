@@ -14,7 +14,6 @@
 <!ELEMENT class EMPTY>
 <!ATTLIST class
     location CDATA #REQUIRED
-    duration (50 | 100) #REQUIRED
     day (monday | tuesday | wednesday | thursday | friday) #REQUIRED
     course (blaw3600 | comp4711 | comp4560 | comp4735 | comp4941 | comp4945) #REQUIRED
     instructor CDATA #REQUIRED
