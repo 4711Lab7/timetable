@@ -49,21 +49,34 @@ class Timetables extends CI_Model{
         }
     }
     
+     /* 
+     * returns all class bookings using the timeslot fasset
+     */
     public function allTimeslots()
     {
         return $this->timeslots;
     }
     
-     public function allDays()
+     /* 
+     * returns all class bookings using the day fasset
+     */
+    public function allDays()
     {
         return $this->days;
     }
     
-     public function allCourses()
+    /* 
+     * returns all class bookings using the course fasset
+     */
+    public function allCourses()
     {
         return $this->courses;
     }
     
+    /*
+     * gets the class booking for the specified time and day of the week using
+     * the timeslot fasset
+     */
     public function getClassByTimeslot($startTime, $day)
     {
         if($this->timeslots[$startTime] != null)
@@ -79,6 +92,10 @@ class Timetables extends CI_Model{
         return null;
     }
     
+    /*
+     * gets the class booking for the specified time and day of the week using
+     * the course fasset
+     */
     public function getClassByCourse($startTime, $day)
     {
          foreach($this->courses as $course)
@@ -94,8 +111,12 @@ class Timetables extends CI_Model{
          return null;
     }
     
-       public function getClassByDay($startTime, $day)
-       {
+    /*
+     * gets the class booking for the specified time and day of the week using
+     * the day fasset
+     */
+    public function getClassByDay($startTime, $day)
+    {
        if($this->days[$day] != null)
         {
             foreach($this->days[$day] as $class)
@@ -109,15 +130,26 @@ class Timetables extends CI_Model{
         return null;
     }
     
+    /*
+     * returns an array of timeslots that appear in the xml
+     */
     public function getTimeslots()
     {
-        foreach($this->timeslots as $time)
-        {
-            
-        }
+        return array_keys($this->timeslots);
+    }
+    
+     /*
+     * returns an array of courses that appear in the xml
+     */
+    public function getCourses()
+    {
+        return array_keys($this->courses);
     }
 }
 
+/*
+ * represents a single booking in the timetable
+ */
 class Booking extends CI_Model
 {
     public $day = null;
