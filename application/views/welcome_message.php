@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Lab 8 - Timetable</title>
+    <meta charset="utf-8">
+    <title>Lab 8 - Timetable</title>
 </head>
 <body>
 
