@@ -21,29 +21,16 @@
     start CDATA #REQUIRED
 >
 <!--must be in this order-->
-<!ELEMENT daysofweek (monday, tuesday, wednesday, thursday, friday)>
+<!ELEMENT daysofweek (weekday)*>
 
-<!ELEMENT monday (class)*>
+<!ELEMENT weekday (class)*>
+<!ATTLIST weekday
+     day (monday | tuesday | wednesday | thursday | friday) #REQUIRED
+>
 
-<!ELEMENT tuesday (class)*>
+<!ELEMENT courses (course)*>
 
-<!ELEMENT wednesday (class)*>
-
-<!ELEMENT thursday (class)*>
-
-<!ELEMENT friday (class)*>
-
-<!--courses must be listed out in this order-->
-<!ELEMENT courses (blaw3600, comp4711, comp4560, comp4735, comp4941, comp4945)>
-
-<!ELEMENT blaw3600 (class)*>
-
-<!ELEMENT comp4711 (class)*>
-
-<!ELEMENT comp4560 (class)*>
-
-<!ELEMENT comp4735 (class)*>
-
-<!ELEMENT comp4941 (class)*>
-
-<!ELEMENT comp4945 (class)*>
+<!ELEMENT course (class)*>
+<!ATTLIST course
+    name CDATA #REQUIRED
+>
