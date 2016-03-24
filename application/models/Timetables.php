@@ -66,35 +66,56 @@ class Timetables extends CI_Model{
     
     public function getClassByTimeslot($startTime, $day)
     {
-        foreach($this->timeslots as $slots)
+        if($this->timeslots[$startTime] != null)
         {
-            //foreach($slots->)
+            foreach($this->timeslots[$startTime] as $class)
+            {
+                if($class->day == $day)
+                {
+                    return $class;
+                }
+            }  
+        }
+        return null;
+    }
+    
+    public function getClassByCourse($startTime, $day)
+    {
+         foreach($this->courses as $course)
+         {
+             foreach($course as $class)
+            {
+                if($class->day === $day && $class->start === $startTime)
+                {
+                    return $class;
+                } 
+            }
+         }
+         return null;
+    }
+    
+       public function getClassByDay($startTime, $day)
+       {
+       if($this->days[$day] != null)
+        {
+            foreach($this->days[$day] as $class)
+            {
+                if($class->start == $startTime)
+                {
+                    return $class;
+                }
+            }  
+        }
+        return null;
+    }
+    
+    public function getTimeslots()
+    {
+        foreach($this->timeslots as $time)
+        {
+            
         }
     }
-    
-    public function getClassByCourse($courseName)
-    {
-        if(isset($this->courses[$courseName]))
-        {
-            return $this->courses[$courseName];
-        }  
-        else
-        {
-           return null; 
-        }     
-    }
-    
-       public function getClassByDay($day)
-    {
-        if(isset($this->days[$day]))
-        {
-            return $this->days[$day];
-        }  
-        else
-        {
-           return null; 
-        }     
-    } 
 }
 
 class Booking extends CI_Model
