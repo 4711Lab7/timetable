@@ -138,6 +138,11 @@ class Timetables extends CI_Model{
         return array_keys($this->timeslots);
     }
     
+    public function getDays() 
+    {
+        return array_keys($this->days);
+    }
+    
      /*
      * returns an array of courses that appear in the xml
      */
