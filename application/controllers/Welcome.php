@@ -1,27 +1,65 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends Application {
 
+    function __construct() {
+        parent::__construct();
+    }
+    
     public function index()
     {
-        
-        //$timeslot = $this->timetables->getTimeslot('830');
-        
-       /*
-        foreach ($timeslot as $record)
-        {
-            echo($record->start);
-            echo($record->end);
-            echo($record->course);
-            
+        $source = $this->timetables->getDays();
+        foreach($source as $dayList) {
+            $dayNames[] = array('Name' => $dayList);
         }
-         */
-       //print_r($this->timetables->getTimeslot('930'));
-       print_r($this->timetables->allTimeslots());
-       
-       //print_r($this->timetables->getCourse('blaw3600'));
-       //print_r($this->timetables->getDay('monday'));
-        $this->load->view('welcome_message');
+        $this->data['dayList'] = $dayNames;
+        $source = $this->timetables->getTimeslots();
+        foreach($source as $timeList) {
+            $timeValues[] = array('timeValue' => $timeList);
+        }
+        $this->data['timeList'] = $timeValues;  
+        $source = $this->timetables->allTimeSlots();
+        foreach($source as $time) {
+            foreach($time as $booking) {
+                $times[] = array('Location' => $booking->location,
+                                 'Day' => $booking->day,
+                                 'Course' => $booking->course,
+                                 'Instructor' => $booking->instructor,
+                                 'End' => $booking->end,
+                                 'Start' => $booking->start);
+            }
+            $this->data['time'] = $times;  
+        }
+        $source = $this->timetables->allDays();
+        foreach($source as $day) {
+            foreach($day as $booking) {
+                $days[] = array('Location' => $booking->location,
+                                 'Day' => $booking->day,
+                                 'Course' => $booking->course,
+                                 'Instructor' => $booking->instructor,
+                                 'End' => $booking->end,
+                                 'Start' => $booking->start);
+            }
+            $this->data['day'] = $days;  
+        }
+        $source = $this->timetables->allCourses();
+        foreach($source as $course) {
+            foreach($course as $booking) {
+                $courses[] = array('Location' => $booking->location,
+                                 'Day' => $booking->day,
+                                 'Course' => $booking->course,
+                                 'Instructor' => $booking->instructor,
+                                 'End' => $booking->end,
+                                 'Start' => $booking->start);
+            }
+            $this->data['course'] = $courses;  
+        }
+        $this->data['pagebody'] = 'welcome_message';
+        $this->render();
+    }
+    
+    public function search($day, $time) {
+        
     }
 }
