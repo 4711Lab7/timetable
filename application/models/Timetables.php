@@ -85,7 +85,7 @@ class Timetables extends CI_Model{
             {
                 if($class->day == $day)
                 {
-                    return $class;
+                    return $class->toString();
                 }
             }  
         }
@@ -104,7 +104,7 @@ class Timetables extends CI_Model{
             {
                 if($class->day === $day && $class->start === $startTime)
                 {
-                    return $class;
+                    return $class->toString();
                 } 
             }
          }
@@ -123,7 +123,7 @@ class Timetables extends CI_Model{
             {
                 if($class->start == $startTime)
                 {
-                    return $class;
+                    return $class->toString();
                 }
             }  
         }
@@ -172,6 +172,11 @@ class Booking extends CI_Model
         $this->location = (string) $class['location'];
         $this->start = (string) $class['start'];
         $this->end = (string) $class['end'];
+    }
+    
+    function toString()
+    {
+        return $this->day . ' '.  $this->start . ' ' . $this->course . ' ' . $this->location;
     }
 }
 

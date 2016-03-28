@@ -9,10 +9,11 @@ class Welcome extends Application {
     
     public function index()
     {
-        if($this->input->post('timeSelector') != NULL && $this->input->post('daySelector') != NULL) {
+        $this->data['searchResult'] = '';
+        if($this->input->post('timeSelector') != null && $this->input->post('daySelector') != null) {
             $selectedTime = $this->input->post('timeSelector');
             $selectedDay = $this->input->post('daySelector');
-            print(search(selectedDay, selectedTime));
+            $this->data['searchResult'] = $this->searchTimetable($selectedTime, $selectedDay);
         }
         $source = $this->timetables->getDays();
         foreach($source as $dayList) {
@@ -64,34 +65,30 @@ class Welcome extends Application {
         $this->render();
     }
     
-    public function search($day, $time) {
+    public function searchTimetable($day, $time) {
         $result1 = $this->timetables->getClassByTimeslot($time, $day);
         $result2 = $this->timetables->getClassByTimeslot($time, $day);
         $result3 = $this->timetables->getClassByDay($time, $day);
-        if(count(result1) != count(result2)) {
-            return "difference";
-        }
-        if(count(result2) != count(result3)) {
-            return "difference";
-        }
-        if(count(result1) != count(result3)) {
-            return "difference";
-        }
-        for($i = 0; $i < count(result1); $i++) {
-            if(result1[i] != result2[i]) {
-                return "difference";
+        
+        if($result1 == $result2 && $result2 == $result3)
+        {
+            if($result1 != null)
+            {
+                return "bingo" . " - " . $result1;
             }
-        }
-        for($i = 0; $i < count(result1); $i++) {
-            if(result2[i] != result3[i]) {
-                return "difference";
+            else
+            {
+              return "you have no classes at this time";
             }
+            
         }
-        for($i = 0; $i < count(result1); $i++) {
-            if(result1[i] != result3[i]) {
-                return "difference";
-            }
+        else
+        {
+            return "timetable missmatch:" .
+                    'fasset1: ' . $result1 .
+                    'fasset2: ' . $result2 .
+                    'fasset3: ' . $result3;
         }
-        return "bingo";
+            
     }
 }
