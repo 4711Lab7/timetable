@@ -14,25 +14,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <select name="timeSelector">
               <option disabled selected>Select Day</option>
         {dayList}
-            <option value={Code}>{Name}</option>
+            <option value={Name}>{Name}</option>
         {/dayList}
-    </select> 
-    </form>
-    <form id="timeForm" action="/" method="post">   
+    </select>  
     <select name="daySelector">
               <option disabled selected>Select Time</option>
         {timeList}
-            <option value={Code}>{timeValue}</option>
+            <option value={timeValue}>{timeValue}</option>
         {/timeList}
     </select> 
+    <input type="submit" value="Submit">
     </form>
-    <button type="button" onclick="submitForms()">Search</button>
-    <script>
-        submitForms = function() {
-            document.getElementById("dayForm").submit();
-            document.getElementById("timeForm").submit();
-        }
-    </script>
+    
+    <h2>{searchResult}</h2>
     <h2>Time View</h2>
     <table class="table table-striped">
         <thead>
