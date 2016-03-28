@@ -10,22 +10,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
     <h1>Lab 8</h1>
-    <form id="dayForm" action="/welcome" method="post">   
-    <select name="timeSelector" onchange='if((this.value !== undefined) && (timeForm.value !== undefined)) { this.form.submit(); }'>
+    <form id="dayForm" action="/" method="post">   
+    <select name="timeSelector">
               <option disabled selected>Select Day</option>
         {dayList}
             <option value={Code}>{Name}</option>
         {/dayList}
     </select> 
     </form>
-    <form id="timeForm" action="/welcome" method="post">   
-    <select name="daySelector" onchange='if((this.value !== undefined) && (dayForm.value !== undefined)) { this.form.submit(); }'>
+    <form id="timeForm" action="/" method="post">   
+    <select name="daySelector">
               <option disabled selected>Select Time</option>
         {timeList}
             <option value={Code}>{timeValue}</option>
         {/timeList}
     </select> 
     </form>
+    <button type="button" onclick="submitForms()">Search</button>
+    <script>
+        submitForms = function() {
+            document.getElementById("dayForm").submit();
+            document.getElementById("timeForm").submit();
+        }
+    </script>
     <h2>Time View</h2>
     <table class="table table-striped">
         <thead>
